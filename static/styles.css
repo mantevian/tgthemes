@@ -1,0 +1,30 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+
+	font-family: sans-serif;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 15ch 15ch;
+	gap: 0.5rem;
+}
+
+textarea {
+	height: 100px;
+}
+
+.outputs {
+	display: flex;
+	gap: 2rem;
+}
+
+.outputs > div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+}

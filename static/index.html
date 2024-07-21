@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="/static/styles.css" />
+		<script src="https://unpkg.com/htmx.org@2.0.1"></script>
+	</head>
+
+	<body>
+		<hgroup>
+			<h1>telegram theme generator</h1>
+			<p>v0.1</p>
+			<p>created by <a href="https://t.me/mantevian">@mantevian</a></p>
+		</hgroup>
+		<form>
+			<label for="name">
+				<span>theme name</span>
+			</label>
+			<input type="text" name="name" value="my_theme" />
+
+			<label for="black_0">
+				<span>black_0</span>
+			</label>
+			<input type="color" name="black_0" value="#17121C" />
+
+			<label for="black_1">
+				<span>black_1</span>
+			</label>
+			<input type="color" name="black_1" value="#261E2E" />
+
+			<label for="black_2">
+				<span>black_2</span>
+			</label>
+			<input type="color" name="black_2" value="#2C2438" />
+
+			<label for="white">
+				<span>white</span>
+			</label>
+			<input type="color" name="white" value="#E3E1E5" />
+
+			<label for="gray">
+				<span>gray</span>
+			</label>
+			<input type="color" name="gray" value="#908B98" />
+
+			<label for="accent_1">
+				<span>accent_1</span>
+			</label>
+			<input type="color" name="accent_1" value="#F38E81" />
+
+			<label for="accent_2">
+				<span>accent_2</span>
+			</label>
+			<input type="color" name="accent_2" value="#CA8181" />
+
+			<input type="submit" value="generate" />
+		</form>
+
+		<p>
+			if you want to make an editable cross-platform theme, go to
+			<a href="https://themes.contest.com/">this theme maker</a>, create a
+			theme and paste the following configurations into ANDROID and
+			TDESKTOP respectively
+			<br />
+			or you can download your theme as a portable file (separate files
+			for each platform)
+		</p>
+
+		<div class="outputs">
+			<div data-platform="android">
+				<p>android:</p>
+				<textarea></textarea>
+				<a>download</a>
+			</div>
+
+			<div data-platform="desktop">
+				<p>desktop:</p>
+				<textarea></textarea>
+				<span>download not available yet</span>
+			</div>
+		</div>
+
+		<script src="/static/index.js" type="module"></script>
+	</body>
+</html>
