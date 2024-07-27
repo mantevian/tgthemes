@@ -1,1 +1,3 @@
-tgthemes
+./tgthemes
+node_modules
+dist

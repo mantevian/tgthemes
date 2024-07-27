@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Telegram Theme Generator</title>
+
+	<link rel="stylesheet" href="./src/styles/style.scss" />
+	<script src="https://unpkg.com/htmx.org@2.0.1"></script>
+	<script src="./src/index.js" type="module"></script>
+	<script src="./src/elements/index.js" type="module"></script>
+</head>
+
+<body>
+	<main>
+		<header>
+			<h1>telegram theme generator</h1>
+		</header>
+
+		<section id="about">
+			<h2>about</h2>
+			<p>this generator lets you make yourself a flat-styled telegram theme simply by creating a color palette.
+				creating them manually takes time so I decided to automate the process and share my work</p>
+		</section>
+
+		<section id="form">
+			<h2>edit your theme</h2>
+			<form>
+				<label>
+					<span>theme name</span>
+					<input type="text" name="name" value="my_theme" />
+				</label>
+
+				<label>
+					<span>background 0</span>
+					<input type="color" name="background_0" value="#17121C" />
+				</label>
+
+				<label>
+					<span>background 1</span>
+					<input type="color" name="background_1" value="#261E2E" />
+				</label>
+
+				<label>
+					<span>background 2</span>
+					<input type="color" name="background_2" value="#2C2438" />
+				</label>
+
+				<label>
+					<span>text 0</span>
+					<input type="color" name="text_0" value="#E3E1E5" />
+				</label>
+
+				<label>
+					<span>text 1</span>
+					<input type="color" name="text_1" value="#908B98" />
+				</label>
+
+				<label>
+					<span>accent 1</span>
+					<input type="color" name="accent_1" value="#FF8172" />
+				</label>
+
+				<label>
+					<span>accent 2</span>
+					<input type="color" name="accent_2" value="#CA8181" />
+				</label>
+			</form>
+		</section>
+
+		<section id="result">
+			<h2>download it</h2>
+			<p>
+				if you want to make an editable cross-platform theme, go to the
+				<a href="https://themes.contest.com/">cloud theme maker</a>, create a
+				theme and paste the following configurations into ANDROID and
+				TDESKTOP respectively
+			</p>
+			<p>
+				otherwise you can download your theme as a portable file (separate files
+				for each platform)
+			</p>
+
+			<div class="outputs">
+				<tgtg-output platform="android" info="copypaste the code into the cloud theme editor or download a fully working portable
+				theme file"></tgtg-output>
+
+				<tgtg-output platform="desktop" info="copypaste the code into the cloud theme editor. please note that the chat background
+				is not included and you'll have to make it yourself! portable download is work in progress"></tgtg-output>
+
+				<tgtg-output platform="ios" info="work in progress"></tgtg-output>
+
+				<tgtg-output platform="macos" info="work in progress"></tgtg-output>
+			</div>
+		</section>
+
+		<footer>
+			<p>telegram theme generator v0.2</p>
+			<p>created by <a href="https://t.me/mantevian">mantevian</a></p>
+			<p>source on <a href="https://github.com/mantevian/tgthemes">github</a></p>
+			<p>MIT license</p>
+		</footer>
+	</main>
+</body>
+
+</html>

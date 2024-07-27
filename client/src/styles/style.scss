@@ -1,0 +1,172 @@
+body {
+	display: flex;
+	justify-content: center;
+
+	padding: px(64) 0 px(128) 0;
+
+	background: var(--background_0, $background_0);
+	color: var(--text_0, $text_0);
+
+	font-family: sans-serif;
+
+	> main {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: px(64);
+
+		width: min(px(1024), 95%);
+
+		> header,
+		section,
+		footer {
+			width: 100%;
+
+			> h2 {
+				font-size: 2rem;
+			}
+		}
+
+		> header {
+			> h1 {
+				margin-bottom: px(8);
+
+				font-size: 3rem;
+			}
+		}
+
+		> section#form {
+			> form {
+				display: flex;
+				flex-direction: column;
+				gap: px(8);
+				width: min(px(720), 100%);
+				padding: 0;
+				margin: 0;
+				border: none;
+
+				> label {
+					height: px(48);
+
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					gap: 0.5rem;
+					align-items: center;
+
+					> input {
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		> section#result {
+			textarea {
+				display: none;
+			}
+
+			> .outputs {
+				display: flex;
+				flex-wrap: wrap;
+				gap: px(32);
+
+				margin-top: px(48);
+
+				> tgtg-output {
+					min-width: min(px(400), 100%);
+					max-width: px(400);
+
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 1rem;
+
+					padding: px(32);
+					border-radius: px(8);
+
+					background: var(--background_1, $background_1);
+
+					> h3 {
+						margin: 0;
+
+						font-size: 1.5rem;
+					}
+
+					> p {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		> footer {
+			padding-top: px(64);
+
+			> p {
+				margin: 0;
+
+				color: var(--text_1, $text_1);
+			}
+
+			a {
+				color: var(--accent_2, $accent_2);
+			}
+		}
+	}
+}
+
+a {
+	color: var(--accent_1, $accent_1);
+	text-decoration: none;
+	font-weight: bold;
+
+	&:not([href]) {
+		color: var(--text_1, $text_1);
+		cursor: default;
+	}
+}
+
+button {
+	padding: 0;
+
+	color: var(--accent_1, $accent_1);
+	text-decoration: none;
+	font-weight: bold;
+
+	border: none;
+	background: none;
+
+	font-family: sans-serif;
+	font-size: 1rem;
+
+	&[disabled] {
+		color: var(--text_1, $text_1);
+	}
+}
+
+button,
+input[type="submit"] {
+	&:not([disabled]) {
+		cursor: pointer;
+	}
+}
+
+input,
+textarea {
+	background: var(--background_2, $background_2);
+	color: var(--text_0, $text_0);
+
+	border: none;
+	border-radius: px(8);
+
+	padding: px(8);
+
+	font-family: sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+* {
+	box-sizing: border-box;
+}

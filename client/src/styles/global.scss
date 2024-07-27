@@ -1,0 +1,19 @@
+@use "sass:math";
+
+$background_0: #17121C;
+$background_1: #261E2E;
+$background_2: #2C2438;
+$text_0: #E3E1E5;
+$text_1: #908B98;
+$accent_1: #ff8172;
+$accent_2: #CA8181;
+
+@function px($pixels) {
+	@if math.is-unitless($pixels) {
+		@return math.div($pixels, 16) + rem;
+	}
+
+	@else {
+		@error "function px($pixels) only accepts unitless values"
+	}
+}
